@@ -5,47 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/carousel.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
             crossorigin="anonymous"></script>
-    <title>Главная | ArchieWh1te Developers</title>
+    <title>~/archiewh1te $ portfolio | DevOps Engineer</title>
 </head>
-<body id="top">
-<header>
+<body id="top" class="devops-body">
 
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+<header>
+    <nav class="navbar navbar-expand-md fixed-top devops-navbar">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">ArchieWh1te Developers</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            <a class="navbar-brand devops-brand" href="index.html">
+                <span class="prompt">~</span><span class="path">/archiewh1te</span>
+                <span class="cursor-blink">_</span>
+            </a>
+            <button class="navbar-toggler devops-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Переключить навигацию">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <ul class="navbar-nav ms-auto mb-2 mb-md-0 devops-nav">
                     <li class="nav-item">
-                        <a class="btn btn-outline-success" aria-current="page" href="index.html">Главная</a>
+                        <a class="nav-link devops-link active" href="index.html">
+                            <span class="tag">[</span>home<span class="tag">]</span>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/archiewh1te" target="_blank">Github</a>
+                        <a class="nav-link devops-link" href="https://github.com/archiewh1te" target="_blank">
+                            <span class="tag">[</span>github<span class="tag">]</span>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Моё портфолио</a>
+                        <a class="nav-link devops-link" href="#portfolio">
+                            <span class="tag">[</span>projects<span class="tag">]</span>
+                        </a>
                     </li>
-                    <!-- <li class="nav-item">
-                      <a class="nav-link" href="#feedback">Написать мне</a>
-                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link devops-link" href="#contact">
+                            <span class="tag">[</span>contact<span class="tag">]</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 </header>
 
-<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
-                aria-label="Slide 1"></button>
+<div id="myCarousel" class="carousel slide devops-carousel" data-bs-ride="carousel">
+    <div class="carousel-indicators devops-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
@@ -54,74 +67,80 @@
     </div>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <div class="item">
-                <img src="img/toolsbotv2.png" class="d-block w-100 img-thumbnail" height="900px"
-                     alt="ToolsBot v2.0"/>
+            <div class="item devops-slide" style="background-image:url('img/toolsbotv2.png')">
+                <div class="devops-slide-overlay"></div>
             </div>
             <div class="container">
-                <div class="carousel-caption text-start">
-                    <p class="fw-light fs-2 fw-bold">ToolsBot v2.0</p>
-                    <p><a class="btn btn-lg btn-danger" href="#portfolio">Посмотреть &raquo;</a></p>
+                <div class="carousel-caption text-start devops-caption">
+                    <div class="devops-tag-line">$ deploy --project=toolsbot_v2</div>
+                    <h1 class="devops-title">ToolsBot v2.0</h1>
+                    <p class="devops-desc">Telegram bot · AIOGram · Python</p>
+                    <a class="btn devops-btn" href="#portfolio">./view_project &rarr;</a>
                 </div>
             </div>
         </div>
         <div class="carousel-item">
-            <div class="item">
-                <img src="img/supportbotv2.png" class="d-block w-100 img-thumbnail" height="900px"
-                     alt="SupportBot v2.0">
+            <div class="item devops-slide" style="background-image:url('img/supportbotv2.png')">
+                <div class="devops-slide-overlay"></div>
             </div>
             <div class="container">
-                <div class="carousel-caption">
-                    <p class="fw-light fs-2 fw-bold text-info"></p>
-                    <p><a class="btn btn-lg btn-danger" href="#portfolio">Посмотреть &raquo;</a></p>
+                <div class="carousel-caption devops-caption">
+                    <div class="devops-tag-line">$ systemctl start supportbot</div>
+                    <h1 class="devops-title">SupportBot v2.0</h1>
+                    <p class="devops-desc">Tech support bot · AIOGram</p>
+                    <a class="btn devops-btn" href="#portfolio">./view_project &rarr;</a>
                 </div>
             </div>
         </div>
         <div class="carousel-item">
-            <div class="item">
-                <img src="img/parser.webp" class="d-block w-100 img-thumbnail" height="900px"
-                     alt="DNS SHOP parsing videocard">
+            <div class="item devops-slide" style="background-image:url('img/parser.webp')">
+                <div class="devops-slide-overlay"></div>
             </div>
             <div class="container">
-                <div class="carousel-caption">
-                    <p class="fw-light fs-2 fw-bold text-warning">DNS SHOP parsing videocard</p>
-                    <p><a class="btn btn-lg btn-danger" href="#portfolio">Посмотреть &raquo;</a></p>
+                <div class="carousel-caption devops-caption">
+                    <div class="devops-tag-line">$ npm run parse --target=dns-shop</div>
+                    <h1 class="devops-title">DNS SHOP parsing videocard</h1>
+                    <p class="devops-desc">Puppeteer · Node.js · JSON output</p>
+                    <a class="btn devops-btn" href="#portfolio">./view_project &rarr;</a>
                 </div>
             </div>
         </div>
         <div class="carousel-item">
-            <div class="item">
-                <img src="img/telegrambot.png" class="d-block w-100 img-thumbnail" height="900px"
-                     alt="Бот планировщик">
+            <div class="item devops-slide" style="background-image:url('img/telegrambot.png')">
+                <div class="devops-slide-overlay"></div>
             </div>
             <div class="container">
-                <div class="carousel-caption">
-                    <p class="fw-light fs-2 fw-bold text-black">Бот планировщик</p>
-                    <p><a class="btn btn-lg btn-danger" href="#portfolio">Посмотреть &raquo;</a></p>
+                <div class="carousel-caption devops-caption">
+                    <div class="devops-tag-line">$ cron --schedule="* * * * *"</div>
+                    <h1 class="devops-title">Бот планировщик</h1>
+                    <p class="devops-desc">Scheduler bot · AIOGram</p>
+                    <a class="btn devops-btn" href="#portfolio">./view_project &rarr;</a>
                 </div>
             </div>
         </div>
         <div class="carousel-item">
-            <div class="item">
-                <img src="img/toolsbotv1.jpg" class="d-block w-100 img-thumbnail" height="900px"
-                     alt="ToolsBot v1.0">
+            <div class="item devops-slide" style="background-image:url('img/toolsbotv1.jpg')">
+                <div class="devops-slide-overlay"></div>
             </div>
             <div class="container">
-                <div class="carousel-caption">
-                    <p class="fw-light fs-2 fw-bold">ToolsBot v1.0</p>
-                    <p><a class="btn btn-lg btn-danger" href="#portfolio">Посмотреть &raquo;</a></p>
+                <div class="carousel-caption devops-caption">
+                    <div class="devops-tag-line">$ git checkout toolsbot-v1.0</div>
+                    <h1 class="devops-title">ToolsBot v1.0</h1>
+                    <p class="devops-desc">Legacy · Python · AIOGram</p>
+                    <a class="btn devops-btn" href="#portfolio">./view_project &rarr;</a>
                 </div>
             </div>
         </div>
         <div class="carousel-item">
-            <div class="item">
-                <img src="img/botmoderator.jpg" class="d-block w-100 img-thumbnail" height="900px"
-                     alt="Бот модератор в группе / чате">
+            <div class="item devops-slide" style="background-image:url('img/botmoderator.jpg')">
+                <div class="devops-slide-overlay"></div>
             </div>
             <div class="container">
-                <div class="carousel-caption text-end">
-                    <p class="fw-light fs-2 fw-bold">Бот модератор в группе / чате</p>
-                    <p><a class="btn btn-lg btn-danger" href="#portfolio">Посмотреть &raquo;</a></p>
+                <div class="carousel-caption text-end devops-caption">
+                    <div class="devops-tag-line">$ chmod +x moderator</div>
+                    <h1 class="devops-title">Бот модератор</h1>
+                    <p class="devops-desc">Group moderation · AIOGram</p>
+                    <a class="btn devops-btn" href="#portfolio">./view_project &rarr;</a>
                 </div>
             </div>
         </div>
@@ -136,184 +155,297 @@
     </button>
 </div>
 
+<div class="container marketing devops-about">
 
-<!-- Marketing messaging and featurettes
-================================================== -->
-<!-- Wrap the rest of the page in another container to center all the content. -->
+    <hr class="devops-divider">
 
-<div class="container marketing">
-
-    <!-- START THE FEATURETTES -->
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
+    <!-- ================= ABOUT / SKILLS ================= -->
+    <div class="row featurette devops-featurette align-items-center">
         <div class="col-md-7">
-            <p class="lead">Hello, my name is Alexander, I'm a Python developer from Russia 🇷🇺. I have experience
-                with Django, CSS, HTML, PyQt5, Flask, Vue, Selenium, AIOGram. I mainly write telegram bots, I study
-                different frameworks and tools.
-            <p class="lead"><b class="fw-bold">Skills:</b> Python / HTML / CSS / JS</p>
-            <p class="lead"><b class="fw-bold">Framework:</b> AIOGram / Django / PyQt5 / Flask / Selenium / Vue </p>
-            <p class="lead fw-bold">🛠️ Languages and Tools : </p>
-            <img src="icons/python-original.svg" title="Python" alt="Python" width="40" height="40"/>&nbsp;
-            <img src="icons/javascript-original.svg" title="JavaScript" alt="JavaScript" width="40"/>&nbsp;
-            <img src="icons/django-plain-wordmark.svg" title="django" alt="django" width="40"/>&nbsp;
-            <img src="icons/css3-plain-wordmark.svg" title="CSS3" alt="CSS" width="40" height="40"/>&nbsp;
-            <img src="icons/html5-original.svg" title="HTML5" alt="HTML" width="40" height="40"/>&nbsp;
-            <img src="icons/nodejs-original-wordmark.svg" title="NodeJS" alt="NodeJS" width="40" height="40"/>&nbsp;
-            <img src="icons/vuejs-original.svg" title="vuejs" alt="vuejs" width="40" height="40"/>&nbsp;
-            <img src="icons/git-original-wordmark.svg" title="Git" alt="Git" width="40" height="40"/>
-            <img src="icons/vscode-original.svg" title="VsCode" alt="VsCode" width="40" height="40"/>
-            <img src="icons/pycharm-original.svg" title="Pycharm" alt="Pycharm" width="40" height="40"/>
-            <img src="icons/sqlalchemy-original.svg" title="SQLAlchemy" alt="SQLAlchemy" width="40" height="40">
+            <div class="devops-panel">
+                <div class="devops-panel-header">
+                    <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+                    <span class="panel-title">~/archiewh1te/about.md</span>
+                </div>
+                <div class="devops-panel-body">
+                    <p class="lead devops-text">
+                        <span class="prompt-inline">$</span> whoami<br>
+                        <span class="output">Alexander — Python developer & sysadmin from Russia 🇷🇺</span>
+                    </p>
 
-            <p class="lead fw-bold fs-4 mt-4">🌐Написать мне</p>
-            <div class="btn-group mt-3">
-                <a class="btn m-2  btn-light" href="https://t.me/archiewh1te" target="_blank"><img
-                        src="icons/social/telegram.png" width="40" height="40" alt="Telegram">В телеграмм</a>
-                <!-- <a class="btn m-2  btn-light" href="#feedback" target="_blank" "><img src="icons/feedback.png" width="40" height="40">Обратная связь</a>  -->
+                    <p class="lead devops-text">
+                        <span class="prompt-inline">$</span> cat skills.txt<br>
+                        <span class="output">Django · CSS · HTML · PyQt5 · Flask · Vue · Selenium · AIOGram</span>
+                    </p>
+
+                    <p class="lead devops-text">
+                        <span class="prompt-inline">$</span> echo $STACK<br>
+                        <span class="output">Python / HTML / CSS / JS</span>
+                    </p>
+
+                    <p class="lead devops-text">
+                        <span class="prompt-inline">$</span> cat sysadmin.txt<br>
+                        <span class="output">Windows Server · Linux · MikroTik · 1C:Предприятие · 1C-Битрикс · PostgreSQL · MySQL · SQLAlchemy</span>
+                    </p>
+
+                    <p class="lead devops-text">
+                        <span class="prompt-inline">$</span> echo $SYSADMIN_STACK<br>
+                        <span class="output">Windows / Linux / MikroTik / 1C / Bitrix / PostgreSQL / MySQL</span>
+                    </p>
+
+                    <p class="lead devops-text">
+                        <span class="prompt-inline">$</span> cat support.txt<br>
+                        <span class="output">1–2 линия поддержки · ККТ (онлайн-кассы) · сканеры штрих-кодов · банковские терминалы · ЭЦП · ОФД / ФНС · ТС ПИОТ ЕСМ · 1С ЭДО · Честный ЗНАК · МЧД</span>
+                    </p>
+
+                    <p class="lead devops-text">
+                        <span class="prompt-inline">$</span> ls frameworks/<br>
+                        <span class="output">AIOGram  Django  PyQt5  Flask  Selenium  Vue</span>
+                    </p>
+
+                    <p class="devops-panel-subtitle">🛠️ Languages and Tools:</p>
+                    <div class="devops-icons">
+                        <img src="icons/python-original.svg" title="Python" alt="Python" width="40" height="40"/>
+                        <img src="icons/javascript-original.svg" title="JavaScript" alt="JavaScript" width="40"/>
+                        <img src="icons/django-plain-wordmark.svg" title="django" alt="django" width="40"/>
+                        <img src="icons/css3-plain-wordmark.svg" title="CSS3" alt="CSS" width="40" height="40"/>
+                        <img src="icons/html5-original.svg" title="HTML5" alt="HTML" width="40" height="40"/>
+                        <img src="icons/nodejs-original-wordmark.svg" title="NodeJS" alt="NodeJS" width="40" height="40"/>
+                        <img src="icons/vuejs-original.svg" title="vuejs" alt="vuejs" width="40" height="40"/>
+                        <img src="icons/git-original-wordmark.svg" title="Git" alt="Git" width="40" height="40"/>
+                        <img src="icons/vscode-original.svg" title="VsCode" alt="VsCode" width="40" height="40"/>
+                        <img src="icons/pycharm-original.svg" title="Pycharm" alt="Pycharm" width="40" height="40"/>
+                        <img src="icons/sqlalchemy-original.svg" title="SQLAlchemy" alt="SQLAlchemy" width="40" height="40"/>
+                    </div>
+                </div>
             </div>
-
         </div>
         <div class="col-md-5">
-            <img src="img/dev1.jpg" width="500" height="500" alt="dev">
-
+            <div class="devops-panel devops-stats">
+                <div class="devops-panel-header">
+                    <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+                    <span class="panel-title">system / status</span>
+                </div>
+                <div class="devops-panel-body">
+                    <div class="status-row"><span>python</span><span class="status-ok">● online</span></div>
+                    <div class="progress devops-progress"><div class="progress-bar" style="width:95%"></div></div>
+                    <div class="status-row"><span>aiogram</span><span class="status-ok">● online</span></div>
+                    <div class="progress devops-progress"><div class="progress-bar" style="width:90%"></div></div>
+                    <div class="status-row"><span>django</span><span class="status-ok">● online</span></div>
+                    <div class="progress devops-progress"><div class="progress-bar" style="width:75%"></div></div>
+                    <div class="status-row"><span>node.js</span><span class="status-ok">● online</span></div>
+                    <div class="progress devops-progress"><div class="progress-bar" style="width:65%"></div></div>
+                    <div class="status-row"><span>vue</span><span class="status-ok">● online</span></div>
+                    <div class="progress devops-progress"><div class="progress-bar" style="width:60%"></div></div>
+                    <div class="status-row"><span>windows server</span><span class="status-ok">● online</span></div>
+                    <div class="progress devops-progress"><div class="progress-bar" style="width:85%"></div></div>
+                    <div class="status-row"><span>linux</span><span class="status-ok">● online</span></div>
+                    <div class="progress devops-progress"><div class="progress-bar" style="width:80%"></div></div>
+                    <div class="status-row"><span>mikrotik</span><span class="status-ok">● online</span></div>
+                    <div class="progress devops-progress"><div class="progress-bar" style="width:75%"></div></div>
+                    <div class="status-row"><span>1c / bitrix</span><span class="status-ok">● online</span></div>
+                    <div class="progress devops-progress"><div class="progress-bar" style="width:70%"></div></div>
+                    <div class="status-row"><span>postgresql / mysql</span><span class="status-ok">● online</span></div>
+                    <div class="progress devops-progress"><div class="progress-bar" style="width:75%"></div></div>
+                </div>
+            </div>
         </div>
-
     </div>
 
+    <hr class="devops-divider">
 
-    <hr class="featurette-divider">
-
-
-    <div class="album py-5 bg-light" id="portfolio">
+    <!-- ================= PORTFOLIO ================= -->
+    <div class="album py-5 devops-album" id="portfolio">
         <div class="container">
-            <div class="col-lg-6 col-md-8 mx-auto">
+            <div class="devops-section-title">
+                <span class="prompt">$</span> ls -la ./projects
             </div>
 
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
                 <div class="col">
-                    <div class="card shadow-sm">
+                    <div class="card devops-card">
+                        <div class="devops-card-header">
+                            <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+                            <span class="panel-title">toolsbot_v2</span>
+                        </div>
                         <img src="img/toolsbotv2.png" alt="ToolsBot v2.0">
                         <div class="card-body">
-                            <p class="fw-light fs-2 fw-bold">ToolsBot v2.0</p>
-                            <p class="card-text fst-italic">Бот имеет 8 функций: Поиск в Google, Поиск в YouTube,
-                                может узнать погоду, показывает информацию об IP и может определить IP сайта,
-                                переводить текста, получать аудио из видео, скачивать аудио из видео с ютуба.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <form action="https://github.com/archiewh1te/ToolsBot_v2.0" target="_blank">
-                                        <button class="btn btn-primary btn-outline">Смотреть</button>
-                                    </form>
+                            <p class="devops-card-title">ToolsBot v2.0</p>
+                            <p class="card-text devops-card-text">Бот имеет 8 функций: Поиск в Google, YouTube, погода, информация об IP, определение IP сайта, перевод текста, извлечение аудио из видео, скачивание аудио с YouTube.</p>
+                            <div class="devops-card-footer">
+                                <a class="btn devops-btn-sm" href="https://github.com/archiewh1te/ToolsBot_v2.0" target="_blank">./run &rarr;</a>
+                                <div class="devops-stack">
+                                    <img src="icons/aiogram.png" class="stack-icon" alt="aiogram">
+                                    <img src="icons/python.svg" class="stack-icon" alt="python">
                                 </div>
-                                <img src="icons/aiogram.png" style="margin-left: 180px;" height="40" alt="aiogram"><img
-                                    src="icons/python.svg" height="50" class="text-muted" alt="python"></img>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="col">
-                    <div class="card shadow-sm">
+                    <div class="card devops-card">
+                        <div class="devops-card-header">
+                            <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+                            <span class="panel-title">supportbot_v2</span>
+                        </div>
                         <img src="img/supportbotv2.png" alt="SupportBot v2.0">
                         <div class="card-body">
-                            <p class="fw-light fs-2 fw-bold">SupportBot v2.0</p>
-                            <p class="card-text fst-italic">Бот технической поддержки — это упорядоченная и
-                                технологичная организация деятельности предприятия для ведения переговоров между
-                                пользователем и сотрудниками технической поддержки. Написаный на фреймворке AioGram
-                                на языке Python.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-
-                                    <form action="https://github.com/archiewh1te/Example_support_bot_v2.0"
-                                          target="_blank">
-                                        <button class="btn btn-primary btn-outline">Смотреть</button>
-                                    </form>
+                            <p class="devops-card-title">SupportBot v2.0</p>
+                            <p class="card-text devops-card-text">Бот технической поддержки — организация переговоров между пользователем и сотрудниками техподдержки. Написан на AIOGram / Python.</p>
+                            <div class="devops-card-footer">
+                                <a class="btn devops-btn-sm" href="https://github.com/archiewh1te/Example_support_bot_v2.0" target="_blank">./run &rarr;</a>
+                                <div class="devops-stack">
+                                    <img src="icons/aiogram.png" class="stack-icon" alt="aiogram">
+                                    <img src="icons/python.svg" class="stack-icon" alt="python">
                                 </div>
-                                <img src="icons/aiogram.png" style="margin-left: 180px;" height="40"><img
-                                    src="icons/python.svg" height="50" class="text-muted"></img>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="col">
-                    <div class="card shadow-sm">
+                    <div class="card devops-card">
+                        <div class="devops-card-header">
+                            <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+                            <span class="panel-title">dns_parser</span>
+                        </div>
                         <img src="img/parser.webp" alt="DNS SHOP parsing videocard">
                         <div class="card-body">
-                            <p class="fw-light fs-2 fw-bold">DNS SHOP parsing videocard</p>
-                            <p class="card-text fst-italic">Парсинг с помощью puppeteer + node.js
-                                Спарсит видеокарты с сайта dns-shop.ru и сохранит их в json фаил.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <form action="https://github.com/archiewh1te/dns_shop_parsing_puppeteer"
-                                          target="_blank">
-                                        <button class="btn btn-primary btn-outline">Смотреть</button>
-                                    </form>
+                            <p class="devops-card-title">DNS SHOP parsing videocard</p>
+                            <p class="card-text devops-card-text">Парсинг с помощью Puppeteer + Node.js. Спарсит видеокарты с dns-shop.ru и сохранит их в JSON-файл.</p>
+                            <div class="devops-card-footer">
+                                <a class="btn devops-btn-sm" href="https://github.com/archiewh1te/dns_shop_parsing_puppeteer" target="_blank">./run &rarr;</a>
+                                <div class="devops-stack">
+                                    <img src="icons/nodejs.svg" class="stack-icon" alt="nodejs">
+                                    <img src="icons/puppeteer.png" class="stack-icon" alt="puppeteer">
                                 </div>
-                                <img src="icons/nodejs.svg" style="margin-left: 140px;" height="70"><img
-                                    src="icons/puppeteer.png" height="50"></img>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="col">
-                    <div class="card shadow-sm">
+                    <div class="card devops-card">
+                        <div class="devops-card-header">
+                            <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+                            <span class="panel-title">scheduler_bot</span>
+                        </div>
                         <img src="img/telegrambot.png" alt="Бот планировщик">
                         <div class="card-body">
-                            <p class="fw-light fs-2 fw-bold">Бот планировщик</p>
-                            <p class="card-text fst-italic">Бот планировщик — который в указанное время отправляет
-                                сообщение в группу.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <form action="https://github.com/archiewh1te/Schedule_AIOGramBot"
-                                          target="_blank">
-                                        <button class="btn btn-primary btn-outline">Смотреть</button>
-                                    </form>
+                            <p class="devops-card-title">Бот планировщик</p>
+                            <p class="card-text devops-card-text">Бот-планировщик, который в указанное время отправляет сообщение в группу.</p>
+                            <div class="devops-card-footer">
+                                <a class="btn devops-btn-sm" href="https://github.com/archiewh1te/Schedule_AIOGramBot" target="_blank">./run &rarr;</a>
+                                <div class="devops-stack">
+                                    <img src="icons/aiogram.png" class="stack-icon" alt="aiogram">
+                                    <img src="icons/python.svg" class="stack-icon" alt="python">
                                 </div>
-                                <img src="icons/aiogram.png" style="margin-left: 180px;" height="40"><img
-                                    src="icons/python.svg" height="50" class="text-muted"></img>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="col">
-                    <div class="card shadow-sm">
+                    <div class="card devops-card">
+                        <div class="devops-card-header">
+                            <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+                            <span class="panel-title">toolsbot_v1</span>
+                        </div>
                         <img src="img/toolsbotv1.jpg" alt="ToolsBot v1.0">
                         <div class="card-body">
-                            <p class="fw-light fs-2 fw-bold">ToolsBot v1.0</p>
-                            <p class="card-text fst-italic">Бот имеет 5 функций: Поиск в Google, Поиск в YouTube,
-                                может узнать погоду, показывает информацию об IP и может определить IP сайта с
-                                обычными кнопками.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <form action="https://github.com/archiewh1te/Toolsbot-v10" target="_blank">
-                                        <button class="btn btn-primary btn-outline">Смотреть</button>
-                                    </form>
+                            <p class="devops-card-title">ToolsBot v1.0</p>
+                            <p class="card-text devops-card-text">Бот имеет 5 функций: Google, YouTube, погода, IP-информация, IP сайта — на обычных кнопках.</p>
+                            <div class="devops-card-footer">
+                                <a class="btn devops-btn-sm" href="https://github.com/archiewh1te/Toolsbot-v10" target="_blank">./run &rarr;</a>
+                                <div class="devops-stack">
+                                    <img src="icons/aiogram.png" class="stack-icon" alt="aiogram">
+                                    <img src="icons/python.svg" class="stack-icon" alt="python">
                                 </div>
-                                <img src="icons/aiogram.png" style="margin-left: 180px;" height="40"><img
-                                    src="icons/python.svg" height="50"></img>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="col">
-                    <div class="card shadow-sm">
+                    <div class="card devops-card">
+                        <div class="devops-card-header">
+                            <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+                            <span class="panel-title">moderator_bot</span>
+                        </div>
                         <img src="img/botmoderator.jpg" alt="Бот модератор в группе / чате">
                         <div class="card-body">
-                            <p class="fw-light fs-2 fw-bold">Бот модератор в группе / чате</p>
-                            <p class="card-text fst-italic">Команды
-                                /info - статистика пользователя
-                                !unmute / !mute время в минутах - Команда для Администратора Снять и поставить
-                                мут.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <form action="https://github.com/archiewh1te/bot_moderator" target="_blank">
-                                        <button class="btn btn-primary btn-outline">Смотреть</button>
-                                    </form>
+                            <p class="devops-card-title">Бот модератор в группе / чате</p>
+                            <p class="card-text devops-card-text">Команды: /info — статистика пользователя, !unmute / !mute [время] — снять/поставить мут (для администратора).</p>
+                            <div class="devops-card-footer">
+                                <a class="btn devops-btn-sm" href="https://github.com/archiewh1te/bot_moderator" target="_blank">./run &rarr;</a>
+                                <div class="devops-stack">
+                                    <img src="icons/aiogram.png" class="stack-icon" alt="aiogram">
+                                    <img src="icons/python.svg" class="stack-icon" alt="python">
                                 </div>
-                                <img src="icons/aiogram.png" style="margin-left: 180px;" height="40"><img
-                                    src="icons/python.svg" height="50"></img>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card devops-card">
+                        <div class="devops-card-header">
+                            <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+                            <span class="panel-title">chatgpt_neuro_bot</span>
+                        </div>
+                        <img src="img/chatgpt_bot.png" alt="ChatGPT Telegram Bot">
+                        <div class="card-body">
+                            <p class="devops-card-title">ChatGPT Telegram Bot</p>
+                            <p class="card-text devops-card-text">Telegram-бот с интеграцией NeuroAPI и OpenAI. Поддерживает диалоги с ChatGPT, генерацию текста и ответы на вопросы прямо в чате.</p>
+                            <div class="devops-card-footer">
+                                <a class="btn devops-btn-sm" href="https://github.com/archiewh1te/ChatGPT_TelegramBot_NeuroAPI_and_OpenAI" target="_blank">./run &rarr;</a>
+                                <div class="devops-stack">
+                                    <img src="icons/aiogram.png" class="stack-icon" alt="aiogram">
+                                    <img src="icons/python.svg" class="stack-icon" alt="python">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card devops-card">
+                        <div class="devops-card-header">
+                            <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+                            <span class="panel-title">birthday_bot</span>
+                        </div>
+                        <img src="img/birthday_bot.png" alt="Birthday Notification Bot">
+                        <div class="card-body">
+                            <p class="devops-card-title">Birthday Notification Bot</p>
+                            <p class="card-text devops-card-text">Telegram-бот для напоминаний о днях рождения. Хранит даты, отправляет уведомления в нужный день и помогает не забывать о важных людях.</p>
+                            <div class="devops-card-footer">
+                                <a class="btn devops-btn-sm" href="https://github.com/archiewh1te/birthday_notification_tg_bot" target="_blank">./run &rarr;</a>
+                                <div class="devops-stack">
+                                    <img src="icons/aiogram.png" class="stack-icon" alt="aiogram">
+                                    <img src="icons/python.svg" class="stack-icon" alt="python">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card devops-card">
+                        <div class="devops-card-header">
+                            <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+                            <span class="panel-title">flet_registration</span>
+                        </div>
+                        <img src="img/flet_registration.png" alt="Flet Registration App">
+                        <div class="card-body">
+                            <p class="devops-card-title">Flet Registration App</p>
+                            <p class="card-text devops-card-text">Приложение для регистрации пользователей на Flet (Python). Демонстрирует создание GUI-форм, валидацию и работу с данными в современном стеке.</p>
+                            <div class="devops-card-footer">
+                                <a class="btn devops-btn-sm" href="https://github.com/archiewh1te/flet-registration" target="_blank">./run &rarr;</a>
+                                <div class="devops-stack">
+                                    <img src="icons/python.svg" class="stack-icon" alt="python">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -322,52 +454,44 @@
             </div>
         </div>
     </div>
-    <!-- /END THE FEATURETTES -->
 
-</div><!-- /.container -->
+    <hr class="devops-divider">
+
+    <div class="devops-contact" id="contact">
+        <div class="devops-section-title"><span class="prompt">$</span> ssh contact@archiewh1te</div>
+        <div class="devops-panel">
+            <div class="devops-panel-header">
+                <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+                <span class="panel-title">~/contact</span>
+            </div>
+            <div class="devops-panel-body devops-contact-body">
+                <p class="devops-text"><span class="prompt-inline">$</span> connect --telegram</p>
+                <a class="btn devops-btn devops-btn-contact" href="https://t.me/archiewh1te" target="_blank">
+                    <img src="icons/social/telegram.png" width="22" height="22" alt="Telegram">
+                    <span>@archiewh1te</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
 
 <script src="js/bootstrap.bundle.min.js"></script>
 </body>
-<!-- Footer -->
-<footer class="bg-dark text-center text-white">
-    <!-- Grid container -->
+
+<footer class="devops-footer">
     <div class="container p-4">
-        <!-- Section: Social media -->
-        <section class="mb-4">
-
-            <a class="" href="https://github.com/archiewh1te" target="_blank"><img src="icons/social/github.png"
-                                                                                   width="40" height="40"></a>
-
-            <a class="" href="https://www.linkedin.com/in/archiewh1te/" target="_blank"><img
-                    src="icons/social/linkedin.png" width="40" height="40"></a>
-
-            <a class="" href="https://www.instagram.com/archiewh1te/" target="_blank"><img
-                    src="icons/social/instagram.png" width="40" height="40"></a>
-
-            <a class="" href="https://ru.stackoverflow.com/users/490591/dx3d9" target="_blank"><img
-                    src="icons/social/stackoverflow.svg" width="40" height="40"></a>
-
-            <a class="" href="https://www.youtube.com/@archiewh1tedev" target="_blank"><img
-                    src="icons/social/youtube.png" width="40" height="40"></a>
-
-            <a class="" href="https://t.me/archiewh1te" target="_blank"><img src="icons/social/telegram.png" width="40"
-                                                                             height="40"></a>
+        <section class="mb-4 devops-social">
+            <a href="https://github.com/archiewh1te" target="_blank"><img src="icons/social/github.png" width="36" height="36" alt="GitHub"></a>
+            <a href="https://www.linkedin.com/in/archiewh1te/" target="_blank"><img src="icons/social/linkedin.png" width="36" height="36" alt="LinkedIn"></a>
+            <a href="https://www.instagram.com/archiewh1te/" target="_blank"><img src="icons/social/instagram.png" width="36" height="36" alt="Instagram"></a>
+            <a href="https://ru.stackoverflow.com/users/490591/dx3d9" target="_blank"><img src="icons/social/stackoverflow.svg" width="36" height="36" alt="StackOverflow"></a>
+            <a href="https://www.youtube.com/@archiewh1tedev" target="_blank"><img src="icons/social/youtube.png" width="36" height="36" alt="YouTube"></a>
+            <a href="https://t.me/archiewh1te" target="_blank"><img src="icons/social/telegram.png" width="36" height="36" alt="Telegram"></a>
         </section>
-        <!-- Section: Social media -->
-
-
-        <!-- Section: Links -->
-
-        <!-- Section: Links -->
     </div>
-    <!-- Grid container -->
-
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        © 2026 Copyright:
-        <a class="text-white" href="https://github.com/archiewh1te">ArchieWh1te Developers</a>
+    <div class="text-center p-3 devops-copyright">
+        <span class="prompt">$</span> echo "© 2026 <a href="https://github.com/archiewh1te">ArchieWh1te Developers</a>" <span class="cursor-blink">_</span>
     </div>
-    <!-- Copyright -->
 </footer>
-<!-- Footer -->
 </html>
